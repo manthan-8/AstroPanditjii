@@ -63,20 +63,19 @@ import ScheduleAppointment from '../components/ScheduleAppointment';
         <div className="min-h-screen">
               <ZodiacSection />
               {/* {Home Section} */}
-          <section className="relative w-full flex items-center justify-center mt-4">
-  <div className="relative w-full max-w-7xl h-[400px] bg-gray-100 rounded-2xl shadow-xl overflow-hidden">
-    {images.map((img, index) => (
-      <img
-        key={index}
-        src={img}
-        alt={`Slide ${index}`}
-        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
-          index === currentIndex ? 'opacity-100' : 'opacity-0'
-        }`}
-      />
-    ))}
-  </div>
-</section>
+          <section className="relative w-full flex items-center justify-center mt-4 px-4">
+        <div className="relative w-full max-w-7xl h-48 md:h-72 lg:h-80 xl:h-[300px] bg-gray-100 rounded-2xl shadow-xl overflow-hidden">
+          {images.map((img, index) => (
+            <img
+              key={index}
+              src={img}
+              alt={`Slide ${index}`}
+              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${index === currentIndex ? 'opacity-100' : 'opacity-0'
+                }`}
+            />
+          ))}
+        </div>
+      </section>
 
 
 
