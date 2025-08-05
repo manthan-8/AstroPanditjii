@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 
 const zodiacSigns = [
   "Aries", "Cancer", "Capricorn", "Libra", "Scorpio", "Leo",
@@ -26,36 +26,76 @@ const horoscopeData: Record<string, Record<string, string>> = {
     weekly: "This week is all about progress and learning.",
     monthly: "Expect changes in career and relationships this month.",
   },
-  // Add other zodiac data here similarly...
   Taurus: {
     daily: "Focus on your personal growth and finances today.",
     weekly: "Take charge of responsibilities and clear old debts.",
     monthly: "Stability will be your strength this month.",
   },
-  // Add rest...
+  // Add other zodiac signs similarly...
 };
 
 export default function ZodiacSection() {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+
   const [selectedZodiacSign, setSelectedZodiacSign] = useState<string | null>(null);
   const [activeHoroscopeTab, setActiveHoroscopeTab] = useState<"daily" | "weekly" | "monthly">("daily");
+  const [isScrollingPaused, setIsScrollingPaused] = useState(false);
 
   const scrollLeft = () => scrollRef.current?.scrollBy({ left: -150, behavior: "smooth" });
   const scrollRight = () => scrollRef.current?.scrollBy({ left: 150, behavior: "smooth" });
+
+  // Auto-scroll every 3 seconds unless paused
+useEffect(() => {
+  if (!isScrollingPaused) {
+    intervalRef.current = setInterval(() => {
+      const scrollContainer = scrollRef.current;
+      if (scrollContainer) {
+        // Check if scroll reached end
+        if (
+          scrollContainer.scrollLeft + scrollContainer.offsetWidth >=
+          scrollContainer.scrollWidth - 10 // small buffer
+        ) {
+          scrollContainer.scrollTo({ left: 0, behavior: 'smooth' }); // Reset to start
+        } else {
+          scrollContainer.scrollBy({ left: 150, behavior: 'smooth' }); // Scroll forward
+        }
+      }
+    }, 3000);
+  }
+
+  return () => clearInterval(intervalRef.current as NodeJS.Timeout);
+}, [isScrollingPaused]);
+
+  // Pause scroll on hover/touch
+  const handlePause = () => {
+    setIsScrollingPaused(true);
+    clearInterval(intervalRef.current as NodeJS.Timeout);
+  };
+
+  const handleResume = () => {
+    setIsScrollingPaused(false);
+  };
 
   return (
     <div className="bg-white py-4 relative">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-xl font-semibold text-gray-800">Today's Astrology Prediction</h2>
-          {/* <a href="#" className="text-indigo-700 text-sm font-medium hover:underline">See All</a> */}
         </div>
 
         {/* Scrollable Zodiac Strip */}
         <div className="relative">
-          <button onClick={scrollLeft} className="absolute left-0 top-1/2 -translate-y-1/2 z-10 p-2  hover:bg-gray-100">◀</button>
+          <button onClick={scrollLeft} className="absolute left-0 top-1/2 -translate-y-1/2 z-10 p-2 hover:bg-gray-100">◀</button>
 
-          <div ref={scrollRef} className="flex overflow-x-auto gap-6 px-10 scrollbar-hide">
+          <div
+            ref={scrollRef}
+            className="flex overflow-x-auto gap-6 px-10 scrollbar-hide"
+            onMouseEnter={handlePause}
+            onMouseLeave={handleResume}
+            onTouchStart={handlePause}
+            onTouchEnd={handleResume}
+          >
             {zodiacSigns.map((sign) => (
               <div
                 key={sign}
@@ -71,7 +111,7 @@ export default function ZodiacSection() {
             ))}
           </div>
 
-          <button onClick={scrollRight} className="absolute right-0 top-1/2 -translate-y-1/2 z-10 p-2  hover:bg-gray-100">▶</button>
+          <button onClick={scrollRight} className="absolute right-0 top-1/2 -translate-y-1/2 z-10 p-2 hover:bg-gray-100">▶</button>
         </div>
       </div>
 
@@ -82,41 +122,39 @@ export default function ZodiacSection() {
             className="relative bg-gradient-to-br from-orange-300 to-yellow-300 rounded-2xl shadow-2xl p-6 w-[90%] max-w-4xl max-h-[90vh] overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
-            <button className="absolute top-3 right-4 text-2xl text-gray-600 hover:text-black" onClick={() => setSelectedZodiacSign(null)}>&times;</button> 
-            
+            <button className="absolute top-3 right-4 text-2xl text-gray-600 hover:text-black" onClick={() => setSelectedZodiacSign(null)}>&times;</button>
 
             {/* Tabs */}
             <div className="flex justify-center mb-8 px-4 md:px-0">
-  <div className="bg-white rounded-xl p-2 shadow-lg flex flex-wrap justify-center gap-2">
-    {(["daily", "weekly", "monthly"] as const).map((period) => (
-      <button
-        key={period}
-        onClick={() => setActiveHoroscopeTab(period)}
-        className={`px-4 sm:px-6 py-2 sm:py-3 rounded-lg capitalize text-sm sm:text-base transition-all duration-300 ${
-          activeHoroscopeTab === period
-            ? 'bg-orange-500 text-white shadow-md'
-            : 'text-gray-600 hover:text-orange-500'
-        }`}
-      >
-        {period.charAt(0).toUpperCase() + period.slice(1)}
-      </button>
-    ))}
-  </div>
-</div>
+              <div className="bg-white rounded-xl p-2 shadow-lg flex flex-wrap justify-center gap-2">
+                {(["daily", "weekly", "monthly"] as const).map((period) => (
+                  <button
+                    key={period}
+                    onClick={() => setActiveHoroscopeTab(period)}
+                    className={`px-4 sm:px-6 py-2 sm:py-3 rounded-lg capitalize text-sm sm:text-base transition-all duration-300 ${
+                      activeHoroscopeTab === period
+                        ? 'bg-orange-500 text-white shadow-md'
+                        : 'text-gray-600 hover:text-orange-500'
+                    }`}
+                  >
+                    {period.charAt(0).toUpperCase() + period.slice(1)}
+                  </button>
+                ))}
+              </div>
+            </div>
 
-{/* Horoscope Content */}
-<div className="bg-white rounded-xl shadow-lg p-4 sm:p-6 mx-4 md:mx-0">
-  <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-4 text-center">
-    {selectedZodiacSign} - {activeHoroscopeTab.charAt(0).toUpperCase() + activeHoroscopeTab.slice(1)} Horoscope
-  </h3>
-  <p className="text-gray-600 leading-relaxed text-center text-base sm:text-lg">
-    {
-      horoscopeData[selectedZodiacSign]?.[activeHoroscopeTab] ||
-      "Horoscope data will be updated soon. Please check back later."
-    }
-  </p>
-</div>
-
+            {/* Horoscope Content */}
+            <div className="bg-white rounded-xl shadow-lg p-4 sm:p-6 mx-4 md:mx-0">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-4 text-center">
+                {selectedZodiacSign} - {activeHoroscopeTab.charAt(0).toUpperCase() + activeHoroscopeTab.slice(1)} Horoscope
+              </h3>
+              <p className="text-gray-600 leading-relaxed text-center text-base sm:text-lg">
+                {
+                  horoscopeData[selectedZodiacSign]?.[activeHoroscopeTab] ||
+                  "Horoscope data will be updated soon. Please check back later."
+                }
+              </p>
+            </div>
           </div>
         </div>
       )}
