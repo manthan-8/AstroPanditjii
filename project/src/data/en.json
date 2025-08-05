@@ -1,0 +1,267 @@
+{
+  "welcome": "Welcome to Pandit Ji's Website",
+  "hero": {
+    "title": "Find Your Path with <1>Spiritual Guidance</1>",
+    "description": "Welcome to the divine world of astrology and spiritual wisdom. With over 25 years of experience, Pandit Ji offers authentic Vedic astrology services, kundli readings, and spiritual guidance to illuminate your life's journey.",
+    "consultNow": "Consult Now",
+    "ourServices": "Our Services"
+  },
+  "stats": {
+    "clients": {
+      "count": "10,000+",
+      "label": "Happy Clients"
+    },
+    "experience": {
+      "count": "25+",
+      "label": "Years Experience"
+    },
+    "rating": {
+      "count": "4.9/5",
+      "label": "Client Rating"
+    },
+    "available": {
+      "count": "24/7",
+      "label": "Available"
+    }
+  },
+  "services": {
+    "title": "Our Sacred Services",
+    "description": "Explore our comprehensive range of astrological and spiritual services designed to guide you towards prosperity and happiness.",
+    "viewAll": "View All Services"
+  },
+  "testimonials": {
+    "title": "What Our Clients Say",
+    "description": "Read the experiences of thousands who have found guidance and clarity through our services.",
+    "readMore": "Read More Reviews"
+  },
+  "cta": {
+    "title": "Ready to Discover Your Destiny?",
+    "description": "Take the first step towards a brighter future. Book your personalized consultation today.",
+    "button": "Book Your Session Now"
+  },
+  "audio": {
+    "playMusic": "🔊 Play Music"
+  },
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "book": "Book",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "servicesList": [
+    {
+      "id": "1",
+      "title": "Kundli Making",
+      "description": "Complete birth chart analysis with detailed planetary positions and their effects on your life.",
+      "icon": "🔮",
+      "price": "₹2,500",
+      "duration": "60 mins"
+    },
+    {
+      "id": "2",
+      "title": "Kundli Matching",
+      "description": "Comprehensive compatibility analysis for marriage with Guna Milan and Manglik analysis.",
+      "icon": "💑",
+      "price": "₹3,500",
+      "duration": "90 mins"
+    },
+    {
+      "id": "3",
+      "title": "Vastu Consultation",
+      "description": "Complete Vastu analysis for homes and offices to bring prosperity and positive energy.",
+      "icon": "🏠",
+      "price": "₹5,000",
+      "duration": "120 mins"
+    },
+    {
+      "id": "4",
+      "title": "Palmistry Reading",
+      "description": "Detailed palm reading to understand your personality, career, love life, and future.",
+      "icon": "✋",
+      "price": "₹1,500",
+      "duration": "45 mins"
+    },
+    {
+      "id": "5",
+      "title": "Numerology Analysis",
+      "description": "Complete numerological analysis of your name and birth date for life guidance.",
+      "icon": "🔢",
+      "price": "₹2,000",
+      "duration": "60 mins"
+    },
+    {
+      "id": "6",
+      "title": "Gems Consultation",
+      "description": "Personalized gemstone recommendations based on your horoscope for maximum benefits.",
+      "icon": "💎",
+      "price": "₹1,800",
+      "duration": "45 mins"
+    }
+  ],
+  "testimonialsList": [
+    {
+      "id": "1",
+      "name": "Priya Sharma",
+      "location": "Mumbai",
+      "rating": 5,
+      "comment": "Pandit Ji's predictions were incredibly accurate. His guidance helped me make the right career decision at the perfect time.",
+      "date": "2024-01-15"
+    },
+    {
+      "id": "2",
+      "name": "Rajesh Kumar",
+      "location": "Delhi",
+      "rating": 5,
+      "comment": "The Kundli matching service was thorough and detailed. We found our perfect life partner through his guidance.",
+      "date": "2024-01-20"
+    },
+    {
+      "id": "3",
+      "name": "Meera Patel",
+      "location": "Ahmedabad",
+      "rating": 5,
+      "comment": "Excellent Vastu consultation! Our business flourished after implementing his recommendations.",
+      "date": "2024-01-25"
+    },
+    {
+      "id": "4",
+      "name": "Amit Singh",
+      "location": "Jaipur",
+      "rating": 5,
+      "comment": "His palmistry reading was spot on. The remedies he suggested have brought positive changes in my life.",
+      "date": "2024-02-01"
+    },
+    {
+      "id": "5",
+      "name": "Kavita Agarwal",
+      "location": "Pune",
+      "rating": 5,
+      "comment": "The gemstone recommendation worked wonders for my health and prosperity. Highly recommended!",
+      "date": "2024-02-05"
+    }
+  ],
+  "blogPosts": [
+    {
+      "id": "1",
+      "title": "Understanding Your Birth Chart: A Beginner's Guide",
+      "summary": "Learn the basics of reading your Kundli and understanding planetary influences on your life.",
+      "content": "A birth chart, also known as Kundli or Janam Patrika, is a celestial snapshot of the sky at the exact moment of your birth. This ancient Vedic tool provides profound insights into your personality, life path, and destiny.",
+      "author": "Pandit Ji",
+      "date": "2024-01-10",
+      "category": "Astrology Basics",
+      "image": "https://images.pexels.com/photos/1629236/pexels-photo-1629236.jpeg"
+    },
+    {
+      "id": "2",
+      "title": "The Power of Gemstones in Vedic Astrology",
+      "summary": "Discover how specific gemstones can enhance positive planetary influences and reduce negative effects.",
+      "content": "Gemstones have been used in Vedic astrology for thousands of years as powerful tools to enhance positive planetary influences and mitigate negative effects. Each gemstone corresponds to a specific planet and can help balance its energy in your life.",
+      "author": "Pandit Ji",
+      "date": "2024-01-20",
+      "category": "Gemstones",
+      "image": "https://images.pexels.com/photos/1427107/pexels-photo-1427107.jpeg"
+    },
+    {
+      "id": "3",
+      "title": "Vastu Tips for a Prosperous Home",
+      "summary": "Simple Vastu principles to bring positive energy and prosperity to your living space.",
+      "content": "Vastu Shastra is the ancient Indian science of architecture and design that helps create harmonious living spaces. Following proper Vastu principles can bring peace, prosperity, and positive energy to your home.",
+      "author": "Pandit Ji",
+      "date": "2024-02-01",
+      "category": "Vastu",
+      "image": "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg"
+    }
+  ],
+  "horoscopeData": [
+    {
+      "sign": "Aries",
+      "daily": "Today brings new opportunities for career growth. Your natural leadership will shine through in team projects.",
+      "weekly": "This week focus on financial planning. A new investment opportunity may present itself mid-week.",
+      "monthly": "March will be transformative for personal relationships. Single Arians may find love, while couples will deepen their bond."
+    },
+    {
+      "sign": "Taurus",
+      "daily": "A peaceful day ahead with focus on family matters. Your practical approach will solve a long-standing issue.",
+      "weekly": "Health should be your priority this week. Consider starting a new fitness routine or dietary changes.",
+      "monthly": "Professional recognition is on the horizon. Your consistent efforts will finally pay off this month."
+    },
+    {
+      "sign": "Gemini",
+      "daily": "Communication is key today. Important conversations will lead to positive outcomes in both personal and professional life.",
+      "weekly": "Travel opportunities may arise. Be open to new experiences and learning opportunities.",
+      "monthly": "Creative projects will flourish. Your innovative ideas will be well-received by others."
+    },
+    {
+      "sign": "Cancer",
+      "daily": "Focus on home and family today. A domestic issue that has been bothering you will find resolution.",
+      "weekly": "Emotional healing is highlighted. Past wounds will begin to heal with time and self-care.",
+      "monthly": "Financial stability improves significantly. A long-term investment will start showing returns."
+    },
+    {
+      "sign": "Leo",
+      "daily": "Your confidence will attract positive attention. A leadership opportunity may present itself unexpectedly.",
+      "weekly": "Creative expression is favored. Artistic endeavors will bring both joy and recognition.",
+      "monthly": "Love life takes center stage. Existing relationships will strengthen, and singles may meet someone special."
+    },
+    {
+      "sign": "Virgo",
+      "daily": "Attention to detail will be your strength today. Organize your tasks and tackle them systematically.",
+      "weekly": "Health improvements are indicated. Your disciplined approach to wellness will show results.",
+      "monthly": "Work projects will reach successful completion. Your methodical approach will be highly appreciated."
+    }
+  ],
+  "muhuratData": [
+    {
+      "occasion": "House Warming",
+      "date": "2024-03-15",
+      "time": "10:30 AM - 12:00 PM",
+      "description": "Auspicious time for Griha Pravesh ceremony"
+    },
+    {
+      "occasion": "Business Opening",
+      "date": "2024-03-18",
+      "time": "11:00 AM - 1:00 PM",
+      "description": "Favorable timing for new business ventures"
+    },
+    {
+      "occasion": "Wedding Ceremony",
+      "date": "2024-03-22",
+      "time": "7:00 AM - 9:00 AM",
+      "description": "Most auspicious time for marriage ceremonies"
+    },
+    {
+      "occasion": "Vehicle Purchase",
+      "date": "2024-03-25",
+      "time": "2:00 PM - 4:00 PM",
+      "description": "Lucky timing for buying new vehicles"
+    }
+  ],
+  "remedies": [
+    {
+      "problem": "Career Growth",
+      "remedy": "Chant Ganesha Mantra daily and offer yellow flowers on Thursdays.",
+      "gemstone": "Yellow Sapphire",
+      "duration": "21 days"
+    },
+    {
+      "problem": "Health Issues",
+      "remedy": "Wear a copper bracelet and donate red cloth on Tuesdays.",
+      "gemstone": "Red Coral",
+      "duration": "40 days"
+    },
+    {
+      "problem": "Financial Problems",
+      "remedy": "Keep a Kuber Yantra in your wallet and chant Lakshmi Mantra.",
+      "gemstone": "Emerald",
+      "duration": "108 days"
+    },
+    {
+      "problem": "Relationship Issues",
+      "remedy": "Perform Venus puja on Fridays and wear white clothes.",
+      "gemstone": "Diamond or White Sapphire",
+      "duration": "30 days"
+    }
+  ]
+}
