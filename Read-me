@@ -1,0 +1,50 @@
+📌 Project Vision
+
+This project is an astrology-based platform with:
+• A React + TypeScript frontend for user interface.
+• A FastAPI backend for horoscopes, astrology tools, chatbot, and payments.
+
+It provides:
+• General zodiac horoscopes on the homepage.
+• Personalized horoscopes (based on DOB, time, and location) on zodiac detail pages.
+• Kundli (birth chart generation) and Love Matching features → available after generation, but locked as premium paid features.
+• The system integrates astrology APIs, AI chatbot, and monetization features.
+
+✨ Features
+1) Frontend (React + TypeScript)
+• Responsive UI with modern design.
+• Homepage
+• Zodiac detail page → Takes DOB, time, and location input and shows personalized horoscope (from backend).
+• Integrated chatbot interface for astrology-related queries.
+• Calls backend APIs for Kundli, compatibility, gemstones, etc.
+• Future: Payment UI for premium features.
+
+2) Backend (FastAPI)
+• Horoscopes
+• General daily, weekly, and monthly horoscopes.
+• Personalized horoscope (DOB, time, location → Kundli-based).
+• Astrology Tools
+• Kundli / Birth Chart generator (via third-party repos).
+• Compatibility & Love Matching.
+• Gemstone recommendations.
+• AI Chatbot Powered by Hugging Face model -> Answers astrology queries.
+• Stores chat history in database. Database should be PostgreSQL.
+    • Horoscope requests.
+    • Chat history.
+    • Payments (future).
+• Monetization
+    • Free general features for all users.
+• Premium features:
+    • Detailed horoscope reports.
+    • Compatibility insights.
+    • Expert chatbot mode.
+• Payment gateway integration.
+
+🏗️ Tech Stack
+• Frontend → React + TypeScript
+• Backend → FastAPI (Python)
+• Database → PostgreSQL
+• AI Model → Hugging Face (for chatbot & predictions)
+• Third-Party Integrations → Astrolog/Kundli repos
+• Payments → Decide later (for premium features)
+
