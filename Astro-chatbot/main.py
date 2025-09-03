@@ -16,7 +16,7 @@ from huggingface_hub import InferenceClient
 # -----------------------------
 # Environment Variables
 # -----------------------------
-HF_TOKEN = os.getenv("HF_TOKEN", "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")  # Replace with your HF token
+HF_TOKEN = os.getenv("HF_TOKEN", "/??")  # Replace with your HF token
 DB_FAISS_PATH = "vectorstore/astrology_db_faiss"
 
 # -----------------------------
